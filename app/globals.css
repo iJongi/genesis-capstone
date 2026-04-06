@@ -1,0 +1,419 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+  }
+
+  /* Rose Theme */
+  .theme-rose {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --primary: 346.8 77.2% 49.8%;
+    --primary-foreground: 355.7 100% 97.3%;
+    --secondary: 346.8 77.2% 90%;
+    --accent: 346.8 77.2% 95%;
+    --border: 346.8 30% 90%;
+    --ring: 346.8 77.2% 49.8%;
+  }
+
+  .theme-rose.dark {
+    --background: 345 30% 5%;
+    --foreground: 355 100% 98%;
+    --primary: 346.8 77.2% 49.8%;
+    --primary-foreground: 355.7 100% 97.3%;
+    --secondary: 345 20% 15%;
+    --accent: 345 20% 20%;
+    --border: 345 20% 20%;
+    --ring: 346.8 77.2% 49.8%;
+  }
+
+  /* Blue Theme */
+  .theme-blue {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 221.2 83.2% 90%;
+    --accent: 221.2 83.2% 95%;
+    --border: 221.2 30% 90%;
+    --ring: 221.2 83.2% 53.3%;
+  }
+
+  .theme-blue.dark {
+    --background: 222 30% 5%;
+    --foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 222 20% 15%;
+    --accent: 222 20% 20%;
+    --border: 222 20% 20%;
+    --ring: 217.2 91.2% 59.8%;
+  }
+
+  /* Green Theme */
+  .theme-green {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --primary: 142.1 76.2% 36.3%;
+    --primary-foreground: 355.7 100% 97.3%;
+    --secondary: 142.1 76.2% 90%;
+    --accent: 142.1 76.2% 95%;
+    --border: 142.1 30% 90%;
+    --ring: 142.1 76.2% 36.3%;
+  }
+
+  .theme-green.dark {
+    --background: 142 30% 5%;
+    --foreground: 142 100% 98%;
+    --primary: 142.1 70.6% 45.3%;
+    --primary-foreground: 144.9 80.4% 10%;
+    --secondary: 142 20% 15%;
+    --accent: 142 20% 20%;
+    --border: 142 20% 20%;
+    --ring: 142.1 70.6% 45.3%;
+  }
+
+  /* Purple Theme */
+  .theme-purple {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --primary: 262.1 83.3% 57.8%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 262.1 83.3% 90%;
+    --accent: 262.1 83.3% 95%;
+    --border: 262.1 30% 90%;
+    --ring: 262.1 83.3% 57.8%;
+  }
+
+  .theme-purple.dark {
+    --background: 262 30% 5%;
+    --foreground: 270 40% 98%;
+    --primary: 263.4 70% 50.4%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 262 20% 15%;
+    --accent: 262 20% 20%;
+    --border: 262 20% 20%;
+    --ring: 263.4 70% 50.4%;
+  }
+
+  /* Custom Theme */
+  .theme-custom {
+    --primary: var(--custom-primary);
+    --background: var(--custom-background);
+    --foreground: var(--custom-foreground);
+    --accent: var(--custom-accent);
+    --secondary: var(--custom-accent);
+    --border: var(--custom-accent);
+    --ring: var(--custom-primary);
+  }
+
+  /* Font Size Classes */
+  .font-small {
+    font-size: 14px;
+  }
+
+  .font-small .text-sm {
+    font-size: 12px;
+  }
+
+  .font-small .text-xs {
+    font-size: 11px;
+  }
+
+  .font-small .text-base {
+    font-size: 14px;
+  }
+
+  .font-small .text-lg {
+    font-size: 16px;
+  }
+
+  .font-small .text-xl {
+    font-size: 18px;
+  }
+
+  .font-small .text-2xl {
+    font-size: 22px;
+  }
+
+  .font-small .text-3xl {
+    font-size: 28px;
+  }
+
+  .font-medium {
+    font-size: 16px;
+  }
+
+  .font-medium .text-sm {
+    font-size: 14px;
+  }
+
+  .font-medium .text-xs {
+    font-size: 12px;
+  }
+
+  .font-medium .text-base {
+    font-size: 16px;
+  }
+
+  .font-medium .text-lg {
+    font-size: 18px;
+  }
+
+  .font-medium .text-xl {
+    font-size: 20px;
+  }
+
+  .font-medium .text-2xl {
+    font-size: 24px;
+  }
+
+  .font-medium .text-3xl {
+    font-size: 30px;
+  }
+
+  .font-large {
+    font-size: 18px;
+  }
+
+  .font-large .text-sm {
+    font-size: 16px;
+  }
+
+  .font-large .text-xs {
+    font-size: 14px;
+  }
+
+  .font-large .text-base {
+    font-size: 18px;
+  }
+
+  .font-large .text-lg {
+    font-size: 20px;
+  }
+
+  .font-large .text-xl {
+    font-size: 22px;
+  }
+
+  .font-large .text-2xl {
+    font-size: 28px;
+  }
+
+  .font-large .text-3xl {
+    font-size: 34px;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  /* Better scrollbar */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--muted-foreground) / 0.3) transparent;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/20 rounded-full;
+    transition: background-color 0.2s;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/40;
+  }
+
+  /* Thin scrollbar variant */
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+}
+
+@layer components {
+  /* Smooth transitions */
+  .transition-smooth {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Glass effect */
+  .glass-effect {
+    @apply bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/60;
+  }
+
+  /* Prose styles */
+  .prose {
+    @apply text-foreground max-w-none;
+  }
+
+  .prose pre {
+    @apply bg-muted/50 rounded-lg p-4 overflow-x-auto my-4 border border-border/50;
+  }
+
+  .prose code {
+    @apply bg-muted/60 px-1.5 py-0.5 rounded text-sm font-mono;
+  }
+
+  .prose pre code {
+    @apply bg-transparent p-0 border-0;
+  }
+
+  .prose h1 {
+    @apply text-2xl sm:text-3xl font-bold mt-8 mb-4;
+  }
+
+  .prose h2 {
+    @apply text-2xl font-bold mt-5 mb-3;
+  }
+
+  .prose h3 {
+    @apply text-xl font-bold mt-4 mb-2;
+  }
+
+  .prose p {
+    @apply my-3;
+  }
+
+  .prose ul,
+  .prose ol {
+    @apply my-3 pl-6;
+  }
+
+  .prose li {
+    @apply my-1;
+  }
+
+  .prose a {
+    @apply text-primary hover:underline;
+  }
+
+  .prose blockquote {
+    @apply border-l-4 border-primary pl-4 italic my-4;
+  }
+
+  .prose table {
+    @apply w-full border-collapse my-4;
+  }
+
+  .prose th {
+    @apply border border-border bg-muted p-2 font-semibold text-left;
+  }
+
+  .prose td {
+    @apply border border-border p-2;
+  }
+}
+
+/* Loading animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slide up animation */
+@keyframes slideUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Shimmer animation for logo */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+.animate-shimmer {
+  animation: shimmer 3s infinite;
+}
